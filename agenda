@@ -14,3 +14,5 @@ Issues:
     Use a closure as the event handler. The lexical scope of the time of closure creation will be retained with the closure so that the shopping item information is available when the event handler runs.
 - How should the user be informed if he tries to create a shopping item with a name that already exists?
     Use a custom error handler that is run when a REST call is made and next() is called with an error object
+- How can I push an existing local repo to a newly created github repo?
+    
