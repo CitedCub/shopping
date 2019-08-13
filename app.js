@@ -3,9 +3,10 @@ var express = require('express');
 //Set up mongoose connection
 var mongoose = require('mongoose');
 // var mongoDB = 'insert_your_database_url_here';
-// var mongoDB = 'mongodb+srv://dbUser:dbUserPassword@cluster0-pyii1.mongodb.net/testdb?retryWrites=true&w=majority';
-require('dotenv/config');
-mongoose.connect(process.env.mongoDB, { useNewUrlParser: true });
+var mongoDB = 'mongodb+srv://dbUser:dbUserPassword@cluster0-pyii1.mongodb.net/testdb?retryWrites=true&w=majority';
+// require('dotenv/config');
+// mongoose.connect(process.env.mongoDB, { useNewUrlParser: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 

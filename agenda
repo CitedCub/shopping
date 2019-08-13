@@ -15,4 +15,6 @@ Issues:
 - How should the user be informed if he tries to create a shopping item with a name that already exists?
     Use a custom error handler that is run when a REST call is made and next() is called with an error object
 - How can I push an existing local repo to a newly created github repo?
-    
+    Use -f for 'force', like so: git push -f origin master
+- How can I untrack files in git repo based on .gitignore?
+    http://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/
