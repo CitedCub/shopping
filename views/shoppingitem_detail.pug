@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Genre: #{shoppingitem.name}
+  
+  div(style='margin-left:20px;margin-top:20px;')
+
+  hr
+  p
+    a(href=shoppingitem.url + '/delete') Delete shopping item
+  p
+    a(href=shoppingitem.url + '/update') Update shopping item

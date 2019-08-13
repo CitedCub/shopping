@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+
+  form#addForm(method='POST' action='/shopping/shoppingitem')
+    div.form-group
+      label(for='name') Item Name:
+      input#name.form-control(type='text', placeholder='Gurka, RajtanTajtan, etc.', name='name' required='true')
+      button#addButton(type='submit') Add
+
+  ul#fetchedItems
+
+  button#fetchButton(type='button') Fetch items
+
+  ul
+    each shoppingitem in shoppingitem_list
+      li
+        a(href=shoppingitem.url) #{shoppingitem.name}
+        button(type='button') Delete
+
+    else
+      li There are no shopping items.
+
+  script(src="/javascripts/main.js")

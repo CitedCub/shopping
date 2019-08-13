@@ -1,0 +1,16 @@
+- Pick shopping item
+- Delete shopping item
+- Add new shopping item
+- Update shopping item name
+
+- Split item list into picked/unpicked items
+
+- Log in
+- Restrict item list to authorized users
+- Update all clients' item lists when an item is created/updated/deleted by a user
+
+Issues:
+- How can the Pick button click event handler know what URL to call?
+    Use a closure as the event handler. The lexical scope of the time of closure creation will be retained with the closure so that the shopping item information is available when the event handler runs.
+- How should the user be informed if he tries to create a shopping item with a name that already exists?
+    Use a custom error handler that is run when a REST call is made and next() is called with an error object

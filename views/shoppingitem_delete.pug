@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+  h1 #{title}: #{shoppingitem.name}
+
+  p Do you really want to delete this Shopping Item?
+
+  form(method='POST' action='')
+    div.form-group
+      input#shoppingitemid.form-control(type='hidden', name='shoppingitemid', value=shoppingitem._id)
+    
+    button.btn.btn-primary(type='submit') Delete

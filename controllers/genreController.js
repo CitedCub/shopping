@@ -126,7 +126,7 @@ exports.genre_delete_post = function (req, res, next) {
 
     Genre.findById(req.params.id).exec(function (err, genre) {
         if (err) { return next(err); }
-        // Sucess. Delete object and redirect to the list of book instances
+        // Sucess. Delete object and redirect to the list of genres
         Genre.findByIdAndRemove(req.body.genreid, function deleteGenre(err) {
             if (err) { return next(err); }
             // Success - go to genre list
