@@ -9,14 +9,7 @@ exports.index = function (req, res) {
 }
 
 exports.shoppingitem_list = function (req, res, next) {
-
-    ShoppingItem.find()
-        .sort([['name', 'ascending']])
-        .exec(function (err, list_shoppingitems) {
-            if (err) { return next(err); }
-            // Successful, so render
-            res.render('shoppingitem_list', { title: 'Shoppling Item List', shoppingitem_list: list_shoppingitems });
-        });
+    res.render('shoppingitem_list', { title: 'Shoppling Item List' });
 };
 
 // Display detail page for a specific Shopping Item.
@@ -115,7 +108,7 @@ exports.shoppingitem_delete_post = function (req, res, next) {
 // Fetch shopping items
 exports.fetchItems = function (req, res, next) {
     ShoppingItem.find()
-        .sort([['name', 'ascending']])
+        .sort({ picked: 1, name: 1 })
         .exec(function (err, list_shoppingitems) {
             if (err) { return next(err); }
             // Successful, so return response

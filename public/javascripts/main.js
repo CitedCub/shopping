@@ -1,5 +1,4 @@
 var addForm = document.querySelector('#addForm');
-var fetchButton = document.querySelector('#fetchButton');
 var ulFetchedItems = document.querySelector('#fetchedItems');
 
 // Configure Add Shopping Item event listener
@@ -29,8 +28,6 @@ addForm.addEventListener('submit', (event) => {
             }
         });
 });
-
-fetchButton.addEventListener('click', fetchItems);
 
 function fetchItems() {
     fetch('/shopping/fetchItems')

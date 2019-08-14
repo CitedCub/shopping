@@ -11,15 +11,4 @@ block content
 
   ul#fetchedItems
 
-  button#fetchButton(type='button') Fetch items
-
-  ul
-    each shoppingitem in shoppingitem_list
-      li
-        a(href=shoppingitem.url) #{shoppingitem.name}
-        button(type='button') Delete
-
-    else
-      li There are no shopping items.
-
   script(src="/javascripts/main.js")
